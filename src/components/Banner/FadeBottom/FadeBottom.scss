@@ -1,0 +1,9 @@
+// @import '../../../assets/sass/sass-assets.scss';
+
+.FadeBottom {
+    min-height: 30px;
+    width: 100%;
+    background-image: -webkit-linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+    background-image: -o-linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+}
