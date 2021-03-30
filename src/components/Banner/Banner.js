@@ -14,23 +14,20 @@ function Banner() {
     console.log("[ Banner ]: ajaxUrls = ", ajaxUrls);
 
     useEffect(() => {
-        const fetchMovies = async () => {
-            const request = await axios.get(ajaxUrls.fetchNetflixOriginals)
-                .then(result => {
-                    // Set featured movie randomly:
-                    setMovie( result.data.results[
-                        Math.floor(Math.random() * result.data.results.length - 1)
-                    ]);
-                    // console.log("[ Banner ]: Fetch RESULT = ", result);
-                })
-                .catch(error => {
-                    console.log("[ Banner ]: Fetch Error = ", error);
-                    return null;
-                });
-            return request;
+        async function fetchMovie() {
+            try {
+                let response = await axios.get(ajaxUrls.fetchNetflixOriginals);
+                console.log("[ Banner ]: fetchMovie Response = ", response.data);
+                // Set random Banner movie:
+                setMovie( response.data.results[
+                    Math.floor(Math.random() * response.data.results.length - 1)
+                ])
+            } catch (err) {
+                console.log("[ Banner ]: fetchMovie Error = ", err);
+            }
         }
 
-        fetchMovies();
+        fetchMovie();
     }, []);
 
 
