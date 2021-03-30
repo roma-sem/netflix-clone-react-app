@@ -5,3 +5,5 @@ Project development completion status:
 
 Project description:
 >>> React JS demo project - Netflix clone application
+
+NOTE: HTML and CSS markup has only DESKTOP version!
