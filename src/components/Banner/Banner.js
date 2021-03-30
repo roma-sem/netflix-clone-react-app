@@ -10,14 +10,15 @@ import ajaxUrls from '../../ajaxUrls';
 
 function Banner() {
     const [movie, setMovie] = useState([]);
-    console.log("[ Banner ]: featured movie = ", movie);
-    console.log("[ Banner ]: ajaxUrls = ", ajaxUrls);
+    // console.log("[ Banner ]: featured movie = ", movie);
+    // console.log("[ Banner ]: ajaxUrls = ", ajaxUrls);
 
     useEffect(() => {
         async function fetchMovie() {
             try {
                 let response = await axios.get(ajaxUrls.fetchNetflixOriginals);
-                console.log("[ Banner ]: fetchMovie Response = ", response.data);
+                // console.log("[ Banner ]: fetchMovie Response = ", response.data);
+
                 // Set random Banner movie:
                 setMovie( response.data.results[
                     Math.floor(Math.random() * response.data.results.length - 1)
