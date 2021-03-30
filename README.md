@@ -1,4 +1,4 @@
 # netflix-clone-react-app
 
 Creator: Roman Semchuk
-Development Status: 35% finshed (Project backup)
+Development Status: 40%
